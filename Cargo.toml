@@ -2,7 +2,25 @@
 name = "connect-4"
 version = "0.1.0"
 edition = "2021"
+authors = ["Son Pham"]
+description = "connect-4"
+repository = "https://github.com/sonerich/connect-4"
+# documentation = ""
+# homepage = ""
+# readme  = "README.md"
+# keywords = []
+# license = ""
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+name = "connect4"
+path = "src/lib.rs"
+
+[[bin]]
+name = "con4"
+path = "src/bin/main.rs"
+
 [dependencies]
+crossterm = "0.17"
+anyhow = "1.0"
