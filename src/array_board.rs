@@ -65,8 +65,8 @@ impl ArrayBoard {
     pub fn display_pretty(&self) -> Result<()> {
         let mut stdout = stdout();
 
-        let cols: String = (0..WIDTH).map(|x| x.to_string()).collect();
-        stdout.queue(PrintStyledContent(style(cols + "\n")))?;
+        let col_numbers: String = (0..WIDTH).map(|x| x.to_string()).collect();
+        stdout.queue(PrintStyledContent(style(col_numbers)))?;
         for _ in 0..HEIGHT {
             stdout.queue(PrintStyledContent(style("\n")))?;
         }
